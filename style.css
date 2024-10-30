@@ -6,29 +6,31 @@ body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
   padding: 0;
-  background: #FFEBEE; /* Light pink background */
+  background: #FFEBEE;
   color: #333;
 }
 
 header {
-  background: #FF4081; /* Bright pink */
+  background: #FF4081;
   color: white;
   padding: 20px;
   text-align: center;
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 2em;
   margin: 0;
 }
 
 h2 {
-  color: #D5006D; /* Darker pink */
+  color: #D5006D;
+  font-size: 1.5em;
 }
 
-.photos {
+.photos, .message, #countdown {
   text-align: center;
-  margin: 20px 0;
+  margin: 10px;
+  padding: 10px; /* Add padding for better touch targets */
 }
 
 .gallery {
@@ -38,8 +40,9 @@ h2 {
 }
 
 .gallery img {
-  max-width: 30%;
-  margin: 10px;
+  width: 100%;
+  max-width: 150px; /* Smaller size for mobile */
+  margin: 5px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
@@ -50,19 +53,32 @@ h2 {
 }
 
 .message {
-  text-align: center;
-  padding: 20px;
-  background: #FFCCBC; /* Light peach background */
+  padding: 15px;
+  background: #FFCCBC;
   border-radius: 10px;
-  margin: 20px;
+  margin: 10px;
 }
 
 footer {
-  background: #FF4081; /* Bright pink */
+  background: #FF4081;
   color: white;
   text-align: center;
   padding: 10px;
-  position: relative;
-  bottom: 0;
   width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  .gallery img {
+    max-width: 100px; /* Further reduce image size on smaller screens */
+  }
+  .message {
+    font-size: 0.9em; /* Adjust message font size */
+  }
 }
